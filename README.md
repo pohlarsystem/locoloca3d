@@ -32,17 +32,63 @@ If a less sandbox-ish approach is wanted, collection of resources (construction 
 
 ## Game features
 
-- Game controls should follow common patterns.
+- Game controls should follow common game design patterns.
 
 - Worlds must be serializable and deserializable (save/load game).
 
+- The game should run on all major platforms.
 
-## Available [game engines](https://github.com/showcases/game-engines)
+- Picking up the game should be as barrier-free as possible (easy to get, easy to install, easy to launch).
 
-*Incomplete list:*
+- The game will most likely use 3D tile sets, so a coordinate grid can be relied on.
+
+
+## Development roadmap
+
+
+### Stage 0
+
+- Build a prototype with a floor and basic navigation.
+
+- Compile it for all major platforms and verify it works.
+
+- Implement basic construction of simple, inanimate objects.
+
+- Implement world loading/saving.
+
+
+### Stage 1
+
+- Implement railroad construction.
+
+- Implement animated trains.
+
+
+## Available [game engines](https://github.com/showcases/game-engines) *(incomplete list)*
 
 - Unity 3D
 
+  - **Pro**: Exports to multiple platforms
+  - **Pro**: Has a large community and huge ecosystem full of support and assets
+  
 - Unreal
 
+  - **Pro**: Exports to multiple platforms
+
 - Babylon JS
+
+
+## Game elements *(incomplete list)*
+
+This is a basic list of planned game elements and how they work.
+
+
+### Citizens
+
+- Citizens have a home and cannot exist in the world without home.
+
+- Citizens will do something.
+
+- When they finished the task they descided on doing, citizens will decide what to do next.
+
+- Their decision must only consider options in the world, e.g. they must not decide to walk to a park when there is none.
